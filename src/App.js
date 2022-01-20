@@ -1,44 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
-import supabase from './db'
+import supabase from './db';
 import { React, useEffect, useState, Fragment } from 'react';
-import Readonly from './Readonly'
-import Edittablerow from './Edittablerow'
+import Readonly from './Readonly';
+import Edittablerow from './Edittablerow';
 
 function App() {
+  const [peopoMapping, setMappingpeopo] = useState([]);
 
-  const [peopoMapping, setMappingpeopo] = useState([])
-
-  const [peoNumber, setpeoNumber] = useState('')
-  const [poNumber, setpoNumber] = useState('')
-  const [editIdpeopo, setEditidpeopo] = useState('')
-  const [editNumpeo, setEditpeonum] = useState('')
-  const [editNumpo, setEditponum] = useState('')
-
+  const [peoNumber, setpeoNumber] = useState('');
+  const [poNumber, setpoNumber] = useState('');
+  const [editIdpeopo, setEditidpeopo] = useState('');
+  const [editNumpeo, setEditpeonum] = useState('');
+  const [editNumpo, setEditponum] = useState('');
 
   async function loadData() {
-    let { data } = await supabase.from('peo_po_mapping').select('*')
+    let { data } = await supabase.from('peo_po_mapping').select('*');
     setMappingpeopo(data);
   }
 
+  console.log({ peopoMapping });
   useEffect(() => {
-    loadData()
+    loadData();
   }, []);
 
   function handlePeo(event) {
-    setpeoNumber(event.target.value)
+    setpeoNumber(event.target.value);
   }
 
   function handlePo(event) {
-    setpoNumber(event.target.value)
+    setpoNumber(event.target.value);
   }
 
   function handleeditPeo(event) {
-    setEditpeonum(event.target.value)
+    setEditpeonum(event.target.value);
   }
 
   function handleeditPo(event) {
-    setEditponum(event.target.value)
+    setEditponum(event.target.value);
   }
 
   async function submitNumberpeopo(event) {
@@ -46,47 +45,46 @@ function App() {
     if (peoNumber !== '' && poNumber !== '') {
       const dataRow = {
         peo_number: peoNumber,
-        po_number: poNumber
+        po_number: poNumber,
       };
 
-      const { data, error } = await supabase.from('peo_po_mapping').insert([dataRow]);
+      const { data, error } = await supabase
+        .from('peo_po_mapping')
+        .insert([dataRow]);
       loadData();
 
       setpeoNumber('');
-      setpoNumber('')
+      setpoNumber('');
     }
   }
 
   const handleEditclick = (event, peopoMapping) => {
     event.preventDefault();
 
-    setEditidpeopo(peopoMapping.id)
-    setEditpeonum(peopoMapping.peo_number)
-    setEditponum(peopoMapping.po_number)
-
-  }
+    setEditidpeopo(peopoMapping.id);
+    setEditpeonum(peopoMapping.peo_number);
+    setEditponum(peopoMapping.po_number);
+  };
 
   async function summitEditnumber() {
     const { data, error } = await supabase
       .from('peo_po_mapping')
       .update({ peo_number: editNumpeo, po_number: editNumpo })
-      .eq('id', editIdpeopo)
+      .eq('id', editIdpeopo);
 
     await loadData();
 
     setpeoNumber('');
-    setpoNumber('')
-
+    setpoNumber('');
   }
 
   async function handleRemove() {
     const { data, error } = await supabase
       .from('peo_po_mapping')
-      .delete(editIdpeopo)
+      .delete(editIdpeopo);
 
-    await loadData()
+    await loadData();
   }
-
 
   return (
     <div className='App'>
@@ -115,31 +113,34 @@ function App() {
                 <Readonly
                   peopoMapping={peopoMapping}
                   handleEditclick={handleEditclick}
-                  handleRemove={handleRemove} />
+                  handleRemove={handleRemove}
+                />
               )}
             </Fragment>
           ))}
         </tbody>
-
       </table>
       <h2>Add PEO-PO Number</h2>
-      <select htmlFor='peo_number'
+      <select
+        htmlFor='peo_number'
         id='peo_number'
         value={peoNumber}
-        onChange={handlePeo}>
-        <option disable select value=""></option>
+        onChange={handlePeo}
+      >
+        <option disable select value=''></option>
         <option value='peo1'>peo1</option>
         <option value='peo2'>peo2</option>
         <option value='peo3'>peo3</option>
         <option value='peo4'>peo4</option>
       </select>
 
-
-      <select htmlFor='po_number'
+      <select
+        htmlFor='po_number'
         id='po_number'
         value={poNumber}
-        onChange={handlePo}>
-        <option disable select value=""></option>
+        onChange={handlePo}
+      >
+        <option disable select value=''></option>
         <option value='po1'>po1</option>
         <option value='po2'>po2</option>
         <option value='po3'>po3</option>
@@ -153,10 +154,10 @@ function App() {
         <option value='po11'>po11</option>
       </select>
 
-      <button type='submit' onClick={submitNumberpeopo} >Add PEO-PO</button>
-
-
-    </div >
+      <button type='submit' onClick={submitNumberpeopo}>
+        Add PEO-PO
+      </button>
+    </div>
   );
 }
 
