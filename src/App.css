@@ -1,4 +1,4 @@
-.app-container {
+/* .app-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -38,4 +38,25 @@ form td:last-child {
 
 form * {
   font-size: 28px;
+} */
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.map {
+  width: 3rem;
+}
+
+.map:hover {
+  background-color: gray;
+  cursor: pointer;
 }
