@@ -2,17 +2,15 @@ import supabase from './db';
 import { useEffect, useState } from 'react';
 import './App.css';
 interface peoPivot {
+  id: number;
   peo: number;
-  po_group: number[];
+  po_group: number[] | null;
   des_en: string;
   des_th: string;
 }
 
-interface peo {
-  id: number;
-  peo: number;
-  des_en: string;
-  des_th: string;
+interface peoPivotProcessed extends peoPivot {
+  po_group: number[];
 }
 
 interface rowsTemplate {
@@ -22,6 +20,7 @@ interface rowsTemplate {
   po: number;
   isMap: boolean;
 }
+
 interface dataMap extends peoPivot {
   key: string;
   text: string;
@@ -34,7 +33,6 @@ interface headerMap {
 }
 function App() {
   const [peoPivot, setPeoPivot] = useState<peoPivot[]>([]);
-  const [peo, setPeo] = useState<peo[]>([]);
 
   async function loadPivotData() {
     let { data: peo_po_pivot, error } = await supabase
@@ -44,19 +42,11 @@ function App() {
     if (peo_po_pivot) setPeoPivot(peo_po_pivot);
   }
 
-  async function loadPeoData() {
-    let { data: peoData, error } = await supabase
-      .from('peo_sorted')
-      .select('*');
-    if (peoData) setPeo(peoData);
-  }
-
   useEffect(() => {
     loadPivotData();
-    loadPeoData();
   }, []);
 
-  const dataMap = processRowData(peoPivot, peo);
+  const dataMap = processRowData(peoPivot);
   const headerMap = getHeaderData();
 
   async function toggleMap(el: rowsTemplate) {
@@ -110,19 +100,15 @@ function App() {
 
 export default App;
 
-function processRowData(pivotData: peoPivot[], peo: peo[]): dataMap[] {
-  const data: peoPivot[] = peo.map((el) => {
-    const match = pivotData.find((pd) => pd.peo === el.peo);
+function processRowData(pivotData: peoPivot[]): dataMap[] {
+  const data: peoPivotProcessed[] = pivotData.map((el) => {
     return {
-      peo: el.peo,
-      po_group: match ? match.po_group : [],
-      des_en: el.des_en,
-      des_th: el.des_th,
+      ...el,
+      po_group: el.po_group || [],
     };
   });
 
   const allPo = [...Array(11).keys()].map((el) => el + 1);
-
   const rowsTemplate: rowsTemplate[] = allPo.map((po) => {
     return {
       key: '',
