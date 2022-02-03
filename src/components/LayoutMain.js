@@ -5,21 +5,50 @@ export default function LayoutMain() {
   return (
     <div>
       <ul className='navbar'>
-        <li>
+
+        <button>
           <Link className='nav-item' to='/'>
             Home
           </Link>
-        </li>
-        <li>
-          <Link className='nav-item' to='/course'>
+        </button>
+
+        <button>
+          <Link className='nav-item' to='/coursedata'>
             Add Course
           </Link>
-        </li>
-        <li>
-          <Link className='nav-item' to='/peo'>
+        </button>
+
+        <button>
+          <Link className='nav-item' to='/codata'>
+            CO Detail
+          </Link>
+        </button>
+
+        <button>
+          <Link className='nav-item' to='/podata'>
+            PO Detail
+          </Link>
+        </button>
+
+        <button>
+          <Link className='nav-item' to='/peodata'>
+            PEO Detail
+          </Link>
+        </button>
+
+
+        <button>
+          <Link className='nav-item' to='/peopomapping'>
             PEO-PO Mapping
           </Link>
-        </li>
+        </button>
+
+        <button>
+          <Link className='nav-item' to=''>
+            CO-PO Mapping
+          </Link>
+        </button>
+
       </ul>
       <Outlet />
     </div>

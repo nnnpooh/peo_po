@@ -1,0 +1,264 @@
+.coapp-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.coapp-container .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.coapp-container .table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.coapp-container th,
+.coapp-container .td {
+  border: 1px solid #ffffff;
+  text-align: center;
+  padding: 4px;
+  font-size: 11px;
+}
+
+.coapp-container .th {
+  background-color: rgb(117, 201, 250);
+}
+
+.coapp-container .td {
+  background-color: rgb(205, 235, 253);
+}
+
+form {
+  display: flex;
+  gap: 5px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 28px;
+} 
+
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+.coapp-container .coapp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+
+.coapp-container .coapp .openModalBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color:white;
+  cursor: pointer;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.codatamodalBackground {
+  width: 80vh;
+  height: 35vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.codatamodalContainer {
+  width: 400px;
+  height: 450px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.codatamodalContainer .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.codatatitleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.codatatitleCloseBtn button {
+  background-color: transparent;
+  border: on;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.codatamodalContainer .body {
+  flex: 50%;
+  margin: -10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.codatamodalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.codatamodalContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 30px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+
+.coapp-container .cointapp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.coapp-container .cointapp .openModalBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.cointmodalBackground {
+  width: 80vh;
+  height: 55vh;
+
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cointmodalContainer {
+  width: 600px;
+  height: 530px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.cointmodalContainer .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.cointtitleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cointtitleCloseBtn button {
+  background-color: transparent;
+  border: on;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cointmodalContainer .body {
+  flex: 50%;
+  margin: -10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.cointmodalContainer .body .bodytitle1 {
+  flex: 50%;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+
+}
+
+.cointmodalContainer .body .bodytitle2 {
+  flex: 50%;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.cointmodalContainer .body .bodytext {
+  flex: 50%;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.cointmodalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cointmodalContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 30px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}

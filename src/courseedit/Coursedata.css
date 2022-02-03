@@ -1,0 +1,263 @@
+.coursedataapp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+  }
+  
+  .coursedataapp-container .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .coursedataapp-container .table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .coursedataapp-container th,
+  .coursedataapp-container .td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 4px;
+    font-size: 11px;
+  }
+  
+  .coursedataapp-container .th {
+    background-color: rgb(117, 201, 250);
+  }
+  
+  .coursedataapp-container .td {
+    background-color: rgb(205, 235, 253);
+  }
+  
+  form {
+    display: flex;
+    gap: 5px;
+  }
+  
+  form td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  form * {
+    font-size: 28px;
+  } 
+  
+  
+  @import url("https://fonts.googleapis.coursedatam/css2?family=Nunito:wght@400;700&display=swap");
+  .coursedataapp-container .coursedataapp {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  
+  .coursedataapp-container .coursedataapp .openModalBtn {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: cornflowerblue;
+    color:white;
+    cursor: pointer;
+  }
+  body {
+    padding: 0;
+    margin:0;
+  }
+  
+  
+  
+  .coursedatamodalBackground {
+    width: 80vh;
+    height: 40vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .coursedatamodalContainer {
+    width: 600px;
+    height: 650px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 45px;
+  }
+  
+  .coursedatamodalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .coursedatatitleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .coursedatatitleCloseBtn button {
+    background-color: transparent;
+    border: on;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .coursedatamodalContainer .body {
+    flex: 50%;
+    margin: -10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  .coursedatamodalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .coursedatamodalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 30px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  
+  .coursedataapp-container .coursedataintapp {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  .coursedataapp-container .coursedataintapp .openModalBtn {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  
+  .coursedataintmodalBackground {
+    width: 80vh;
+    height: 55vh;
+  
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .coursedataintmodalContainer {
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
+  
+  .coursedataintmodalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .coursedatainttitleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .coursedatainttitleCloseBtn button {
+    background-color: transparent;
+    border: on;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .coursedataintmodalContainer .body {
+    flex: 50%;
+    margin: -10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  .coursedataintmodalContainer .body .bodytitle1 {
+    flex: 50%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+
+  }
+
+  .coursedataintmodalContainer .body .bodytitle2 {
+    flex: 50%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration:underline ;
+  }
+
+  .coursedataintmodalContainer .body .bodytext {
+    flex: 50%;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  
+  .coursedataintmodalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .coursedataintmodalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 30px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+  }

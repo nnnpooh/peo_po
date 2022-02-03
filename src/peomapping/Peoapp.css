@@ -1,0 +1,255 @@
+.peoapp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+  }
+  
+.peoapp-container .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+table {
+   border-collapse: collapse;
+   width: 100%;
+  }
+  
+th,
+.td {
+  border: 1px solid #ffffff;
+  text-align: center;
+  padding: 4px;
+  font-size: 11px;
+  }
+  
+.peoapp-container .th {
+    background-color: rgb(117, 201, 250);
+  }
+  
+.peoapp-container .td {
+    background-color: rgb(205, 235, 253);
+  }
+  
+form {
+    display: flex;
+    gap: 5px;
+  }
+  
+form td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+form * {
+    font-size: 28px;
+  } 
+
+
+
+ @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+  .peoapp-container .peoapp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.peoapp-container .peoapp .openModalBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+.peodatamodalBackground {
+    width: 80vh;
+    height: 35vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .peodatamodalContainer {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
+  
+  .peodatamodalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .peodatatitleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .peodatatitleCloseBtn button {
+    background-color: transparent;
+    border: on;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .peodatamodalContainer .body {
+    flex: 50%;
+    margin: -10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  .peodatamodalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .peodatamodalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 30px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+  .peoapp-container .peointapp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.peoapp-container .peointapp .openModalBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+.peointmodalBackground {
+    width: 80vh;
+    height: 55vh;
+
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .peointmodalContainer {
+    width: 600px;
+    height: 530px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
+  
+  .peointmodalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .peointtitleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .peointtitleCloseBtn button {
+    background-color: transparent;
+    border: on;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .peointmodalContainer .body .bodytitle1 {
+    flex: 50%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+  
+  }
+
+  .peointmodalContainer .body .bodytitle2 {
+    flex: 50%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .peointmodalContainer .body .bodytext {
+    flex: 50%;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  
+  .peointmodalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .peointmodalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 30px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+  }

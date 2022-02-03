@@ -1,9 +1,12 @@
-import '../App.css';
+import './Peopomapping.css';
 import supabase from '../db';
 import { useEffect, useState } from 'react';
+import Peopointmodal from './Peopoint';
 
 export default function PeoPoMap() {
   const [peoPivot, setPeoPivot] = useState([]);
+
+  const [openpeopoIntmodal, setopenpeopoIntmodal] = useState(false)
 
   async function loadPivotData() {
     let { data: peo_po_pivot, error } = await supabase
@@ -37,33 +40,51 @@ export default function PeoPoMap() {
   }
 
   return (
-    <div className='App'>
-      <table>
-        <thead>
-          <tr>
-            {headers.map((el) => (
-              <th key={el.key}>{el.text}</th>
-            ))}
-          </tr>
-        </thead>
+    <div className='peopoapp-container'>
 
-        <tbody>
-          {dataMap.map((el) => (
-            <tr key={el.key}>
-              <td>{el.text}</td>
-              {el.rows.map((row) => (
-                <td
-                  key={row.key}
-                  className='map'
-                  onClick={() => toggleMap(row)}
-                >
-                  {row.text}
-                </td>
+      <div className='title'>
+        <h1>
+          PEO-PO Mapping
+        </h1>
+      </div>
+
+      <div className='peopointapp'>
+        <button
+          onClick={() => {
+            setopenpeopoIntmodal(true)
+          }} > Instruction </button>
+        {openpeopoIntmodal && <Peopointmodal
+          closeintModal={setopenpeopoIntmodal} />}
+
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              {headers.map((el) => (
+                <th key={el.key}>{el.text}</th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            {dataMap.map((el) => (
+              <tr key={el.key}>
+                <td>{el.text}</td>
+                {el.rows.map((row) => (
+                  <td
+                    key={row.key}
+                    className='map'
+                    onClick={() => toggleMap(row)}
+                  >
+                    {row.text}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
@@ -127,3 +148,4 @@ function getHeaderData() {
   });
   return headers;
 }
+

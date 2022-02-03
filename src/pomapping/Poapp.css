@@ -1,0 +1,253 @@
+.poapp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+  }
+  
+.poapp-container .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+.poapp-containet .table {
+   border-collapse: collapse;
+   width: 100%;
+  }
+  
+  .poapp-containet th,
+  .poapp-containet .td {
+  border: 1px solid #ffffff;
+  text-align: left;
+  padding: 4px;
+  font-size: 11px;
+  }
+  
+.poapp-container .th {
+    background-color: rgb(117, 201, 250);
+  }
+  
+.poapp-container .td {
+    background-color: rgb(205, 235, 253);
+  }
+  
+form {
+    display: flex;
+    gap: 5px;
+  }
+  
+form td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+form * {
+    font-size: 28px;
+  } 
+
+  
+ @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+  .poapp-container .poapp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.poapp-container .poapp .openModalBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+.podatamodalBackground {
+    width: 80vh;
+    height: 30vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .podatamodalContainer {
+    width: 400px;
+    height: 450px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
+  
+  .podatamodalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .podatatitleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .podatatitleCloseBtn button {
+    background-color: transparent;
+    border: on;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .podatamodalContainer .body {
+    flex: 50%;
+    margin: -10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  
+  
+  .podatamodalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .podatamodalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 30px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+  .poapp-container .pointapp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.poapp-container .pointapp .openModalBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+.pointmodalBackground {
+    width: 80vh;
+    height: 50vh;
+
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pointmodalContainer {
+    width: 600px;
+    height: 470px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
+  
+  .pointmodalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .pointtitleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .pointtitleCloseBtn button {
+    background-color: transparent;
+    border: on;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .pointmodalContainer .body {
+    flex: 50%;
+    margin: -10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  .pointmodalContainer .body .bodytitle1 {
+    flex: 50%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+  
+  }
+
+  .pointmodalContainer .body .bodytitle2 {
+    flex: 50%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .pointmodalContainer .body .bodytext {
+    flex: 50%;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  .pointmodalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
