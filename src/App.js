@@ -6,8 +6,8 @@ import CourseData from './courseedit/CourseData';
 import LayoutMain from './components/LayoutMain';
 import Peoapp from './peomapping/Peoapp';
 import Poapp from './pomapping/Poapp';
-import Coapp from './comapping/Coapp'
-
+import Coapp from './comapping/Coapp';
+import Copomapping from './copomapping/Copomapping';
 function App() {
   return (
     <div className='App'>
@@ -19,9 +19,10 @@ function App() {
           <Route path='peodata' element={<Peoapp />}></Route>
           <Route path='podata' element={<Poapp />}></Route>
           <Route path='codata' element={<Coapp />}></Route>
+          <Route path='copomapping' element={<Copomapping />}></Route>
         </Route>
       </Routes>
-    </div >
+    </div>
   );
 }
 
