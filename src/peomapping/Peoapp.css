@@ -11,24 +11,24 @@
     margin-top: 0px;
   }
   
-table {
+  .peoapp-container table {
    border-collapse: collapse;
    width: 100%;
   }
   
-th,
-.td {
+.peoapp-container th,
+td {
   border: 1px solid #ffffff;
   text-align: center;
   padding: 4px;
   font-size: 11px;
   }
   
-.peoapp-container .th {
+.peoapp-container th {
     background-color: rgb(117, 201, 250);
   }
   
-.peoapp-container .td {
+.peoapp-container td {
     background-color: rgb(205, 235, 253);
   }
   
@@ -85,7 +85,7 @@ body {
   
   .peodatamodalContainer {
     width: 400px;
-    height: 400px;
+    height: 450px;
     border-radius: 10px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -179,7 +179,7 @@ body {
   
   .peointmodalContainer {
     width: 600px;
-    height: 530px;
+    height: 600px;
     border-radius: 10px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

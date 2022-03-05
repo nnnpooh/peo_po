@@ -46,7 +46,7 @@ function Poaddmodal({ closepoModal, poMapping, poNumber, poDesthai, poDeseng, ha
                         id='po_title'
                         value={poTitle}
                         onChange={handlepoTitle}
-                        style={{ width: '300px', height: '15px' }}>
+                        style={{ width: '300px', height: '20px' }}>
                     </textarea>
 
                     <br />

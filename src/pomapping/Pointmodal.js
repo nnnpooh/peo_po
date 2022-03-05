@@ -41,6 +41,7 @@ function Pointmodal({ closeintModal }) {
                             ปุ่ม Instruction จากนั้นจะพบหน้าต่างสำหรับกรอกข้อมูลในส่วนต่างๆดังนี้ <br />
                             <br />
                             PO Number : หมายเลขข้อของผลลัพธ์การศึกษา   <br />
+                            PO Title : หัวข้อผลลัพท์การศึกษา   <br />
                             PO Description Thai : รายละเอียดของผลลัพท์การศึกษาภาษาไทย <br />
                             PO Description English : รายละเอียดของผลลัพท์การศึกษาภาษาอังกฤษ <br />
                             <br />

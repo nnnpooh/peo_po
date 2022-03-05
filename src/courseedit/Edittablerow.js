@@ -4,7 +4,10 @@ import './Coursedata.css'
 const Edittablerow = ({ editCourseid, editCoursenamethai, editCoursenameeng, editCourseyear,
     editCoursesems, editCoursetype, editCoursecre, editCoursecredes, editCoursedesthai, editCoursedeseng, editCoursepre,
     handleEditcourseid, handleEditcoursenamethai, handleEditcoursenameeng, handleEditcourseyear, handleEditcoursesems, handleEditcoursetype,
-    handleEditcoursecre, handleEditcoursecredes, handleEditcoursepre, handleEditcoursedesthai, handleEditcoursedeseng, submitEditcourse }) => {
+    handleEditcoursecre, handleEditcoursecredes, handleEditcoursepre, handleEditcoursedesthai, handleEditcoursedeseng, submitEditcourse,
+    editLecthai, editLeceng, handleEditcourselecthai, handleEditcourseleceng, editCoursetypeeng, handleEditcoursetypeeng,
+    editCourseasses, handleEditcourseasses, editTeachmedthai, editTeachmedeng, handleEditteachmedthai, handleEditteachmedeng,
+    editVenue, editRef, editAddref, handleEditvenue, handleEditref, handleEditaddref }) => {
 
     return (
 
@@ -32,6 +35,24 @@ const Edittablerow = ({ editCourseid, editCoursenamethai, editCoursenameeng, edi
                     id='course_nameeng'
                     value={editCoursenameeng}
                     onChange={handleEditcoursenameeng}
+                    style={{ width: '300px', height: '20px' }}
+                ></textarea>
+            </td>
+
+            <td>
+                <textarea htmlFor='lec_thai'
+                    id='lec_thai'
+                    value={editLecthai}
+                    onChange={handleEditcourselecthai}
+                    style={{ width: '300px', height: '20px' }}
+                ></textarea>
+            </td>
+
+            <td>
+                <textarea htmlFor='lec_eng'
+                    id='lec_eng'
+                    value={editLeceng}
+                    onChange={handleEditcourseleceng}
                     style={{ width: '300px', height: '20px' }}
                 ></textarea>
             </td>
@@ -70,9 +91,21 @@ const Edittablerow = ({ editCourseid, editCoursenamethai, editCoursenameeng, edi
                     value={editCoursetype}
                     onChange={handleEditcoursetype}>
                     <option disable select value=""> </option>
-
                     <option value='วิชาหลัก'>วิชาหลัก</option>
                     <option value='วิชาเลือก'>วิชาเลือก</option>
+                    <option value='ตัวฟรีอิสระ'>ตัวฟรีอิสระ</option>
+                </select>
+            </td>
+
+            <td>
+                <select htmlFor='course_typeeng'
+                    id='course_typeeng'
+                    value={editCoursetypeeng}
+                    onChange={handleEditcoursetypeeng}>
+                    <option disable select value=""> </option>
+                    <option value='General Education'>General Education</option>
+                    <option value='Field of specialization'>Field of specialization</option>
+                    <option value='Free elective'>Free elective</option>
                 </select>
             </td>
 
@@ -105,6 +138,53 @@ const Edittablerow = ({ editCourseid, editCoursenamethai, editCoursenameeng, edi
             </td>
 
             <td>
+                <select htmlFor='teachmed_thai'
+                    id='teachmed_thai'
+                    value={editTeachmedthai}
+                    onChange={handleEditteachmedthai}>
+                    <option disable select value=""> </option>
+                    <option value='บรรยาย'>บรรยาย </option>
+                    <option value='ปฏิบัติการ'>ปฏิบัติการ</option>
+                    <option value='ฝึกปฏิบัติ'>ฝึกปฏิบัติ </option>
+                    <option value='สหกิจศึกษา'>สหกิจศึกษา </option>
+                </select>
+            </td>
+
+            <td>
+                <select htmlFor='teachmed_eng'
+                    id='teachmed_eng'
+                    value={editTeachmedeng}
+                    onChange={handleEditteachmedeng}>
+                    <option disable select value=""> </option>
+                    <option value='Lecture '>Lecture </option>
+                    <option value='Laboratory'>Laboratory</option>
+                    <option value='Practice '>Practice </option>
+                    <option value='Co-operative education'>Co-operative education</option>
+                </select>
+            </td>
+
+            <td>
+                <select htmlFor='assesment_thai'
+                    id='assesment_thai'
+                    value={editCourseasses}
+                    onChange={handleEditcourseasses}>
+                    <option disable select value=""> </option>
+                    <option value='A-F'>A-F</option>
+                    <option value='S/U '>S/U </option>
+                    <option value='P'>P</option>
+                </select>
+            </td>
+
+            <td>
+                <textarea htmlFor='venue_thai'
+                    id='venue_thai'
+                    value={editVenue}
+                    onChange={handleEditvenue}
+                    style={{ width: '300px', height: '20px' }}
+                ></textarea>
+            </td>
+
+            <td>
                 <textarea htmlFor='des_thai'
                     id='des_thai'
                     value={editCoursedesthai}
@@ -119,6 +199,24 @@ const Edittablerow = ({ editCourseid, editCoursenamethai, editCoursenameeng, edi
                     value={editCoursedeseng}
                     onChange={handleEditcoursedeseng}
                     style={{ width: '400px', height: '100px' }}
+                ></textarea>
+            </td>
+
+            <td>
+                <textarea htmlFor='ref'
+                    id='ref'
+                    value={editRef}
+                    onChange={handleEditref}
+                    style={{ width: '300px', height: '20px' }}
+                ></textarea>
+            </td>
+
+            <td>
+                <textarea htmlFor='addref'
+                    id='addref'
+                    value={editAddref}
+                    onChange={handleEditaddref}
+                    style={{ width: '300px', height: '20px' }}
                 ></textarea>
             </td>
 

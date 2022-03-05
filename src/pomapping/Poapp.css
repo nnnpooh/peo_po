@@ -17,18 +17,18 @@
   }
   
   .poapp-containet th,
-  .poapp-containet .td {
+  .poapp-containet td {
   border: 1px solid #ffffff;
   text-align: left;
   padding: 4px;
   font-size: 11px;
   }
   
-.poapp-container .th {
+.poapp-container th {
     background-color: rgb(117, 201, 250);
   }
   
-.poapp-container .td {
+.poapp-container td {
     background-color: rgb(205, 235, 253);
   }
   
@@ -84,7 +84,7 @@ body {
   
   .podatamodalContainer {
     width: 400px;
-    height: 450px;
+    height: 500px;
     border-radius: 10px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -179,7 +179,7 @@ body {
   
   .pointmodalContainer {
     width: 600px;
-    height: 470px;
+    height: 550px;
     border-radius: 10px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

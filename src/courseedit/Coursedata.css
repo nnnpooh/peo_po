@@ -17,18 +17,18 @@
   }
   
   .coursedataapp-container th,
-  .coursedataapp-container .td {
+  .coursedataapp-container td {
     border: 1px solid #ffffff;
     text-align: center;
     padding: 4px;
     font-size: 11px;
   }
   
-  .coursedataapp-container .th {
+  .coursedataapp-container th {
     background-color: rgb(117, 201, 250);
   }
   
-  .coursedataapp-container .td {
+  .coursedataapp-container td {
     background-color: rgb(205, 235, 253);
   }
   
@@ -75,7 +75,7 @@
   
   
   .coursedatamodalBackground {
-    width: 80vh;
+    width: 180vh;
     height: 40vh;
     position: fixed;
     display: flex;
@@ -84,8 +84,8 @@
   }
   
   .coursedatamodalContainer {
-    width: 600px;
-    height: 650px;
+    width: 1000px;
+    height: 725px;
     border-radius: 5px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -118,7 +118,6 @@
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
-    text-align: center;
   }
   
   .coursedatamodalContainer .footer {
@@ -178,7 +177,7 @@
   
   .coursedataintmodalContainer {
     width: 600px;
-    height: 600px;
+    height: 670px;
     border-radius: 10px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

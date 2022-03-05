@@ -2,16 +2,22 @@ import { React, useEffect, useState } from "react";
 
 
 const Edittablerow = ({ editDesthai, editDeseng, handleeditDesthai, handleeditDeseng, summitEditnumber,
-    editcoNumber, handleEditcoNumber, coMapping }) => {
+    editcoNumber, handleEditcoNumber, editcourseId, handleEditcourseid, editlearnMethod, editevalMethod, handleEditlearnmethod,
+    handleEditevalmethod }) => {
     return (
         <tr>
             <td>
-                {coMapping.course_id}
+                <input
+                    value={editcourseId}
+                    onChange={handleEditcourseid}>
+                </input>
             </td>
             <td>
                 <input
                     value={editcoNumber}
-                    onChange={handleEditcoNumber}></input>
+                    onChange={handleEditcoNumber}>
+
+                </input>
             </td>
             <td>
                 <textarea
@@ -24,6 +30,20 @@ const Edittablerow = ({ editDesthai, editDeseng, handleeditDesthai, handleeditDe
                 <textarea
                     value={editDeseng}
                     onChange={handleeditDeseng}
+                    style={{ width: '400px', height: '100px' }}>
+                </textarea>
+            </td>
+            <td>
+                <textarea
+                    value={editlearnMethod}
+                    onChange={handleEditlearnmethod}
+                    style={{ width: '400px', height: '100px' }}>
+                </textarea>
+            </td>
+            <td>
+                <textarea
+                    value={editevalMethod}
+                    onChange={handleEditevalmethod}
                     style={{ width: '400px', height: '100px' }}>
                 </textarea>
             </td>

@@ -8,6 +8,8 @@ import Peoapp from './peomapping/Peoapp';
 import Poapp from './pomapping/Poapp';
 import Coapp from './comapping/Coapp';
 import Copomapping from './copomapping/Copomapping';
+import Obe3 from './obe3/Obe3';
+
 function App() {
   return (
     <div className='App'>
@@ -20,6 +22,7 @@ function App() {
           <Route path='podata' element={<Poapp />}></Route>
           <Route path='codata' element={<Coapp />}></Route>
           <Route path='copomapping' element={<Copomapping />}></Route>
+          <Route path='obe3' element={<Obe3 />}></Route>
         </Route>
       </Routes>
     </div>

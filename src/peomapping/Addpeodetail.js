@@ -22,7 +22,7 @@ function Peoaddmodal({ closepeoModal, peoMapping, peoNumber, peoDesthai, peoDese
                     <input
                         value={peoNumber}
                         onChange={handlepeoNumber}
-                        style={{ width: '15px', height: '15px' }}>
+                        style={{ width: '20px', height: '20px' }}>
 
                     </input>
 

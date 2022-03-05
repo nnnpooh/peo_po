@@ -5,6 +5,7 @@ export default function LayoutMain() {
   return (
     <div>
       <ul className='navbar'>
+
         <button>
           <Link className='nav-item' to='/'>
             Home
@@ -24,6 +25,12 @@ export default function LayoutMain() {
         </button>
 
         <button>
+          <Link className='nav-item' to='/obe3'>
+            OBE 3
+          </Link>
+        </button>
+
+        <button>
           <Link className='nav-item' to='/podata'>
             PO Detail
           </Link>
@@ -34,6 +41,7 @@ export default function LayoutMain() {
             PEO Detail
           </Link>
         </button>
+
 
         <button>
           <Link className='nav-item' to='/peopomapping'>
@@ -46,6 +54,7 @@ export default function LayoutMain() {
             CO-PO Mapping
           </Link>
         </button>
+
       </ul>
       <Outlet />
     </div>

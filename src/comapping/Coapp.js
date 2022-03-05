@@ -13,12 +13,16 @@ function Coapp() {
   const [coNumber, setcoNumber] = useState('');
   const [coDesthai, setcoDesthai] = useState('');
   const [coDeseng, setcoDeseng] = useState('');
+  const [colearnMethod, setcolearnMethod] = useState('')
+  const [coevalMethod, setcoevalMethod] = useState('')
 
   const [editIdco, seteditIdco] = useState('');
   const [editcourseId, setEditcourseid] = useState('');
   const [editcoNumber, setEditconum] = useState('');
   const [editDesthai, setEditdesthai] = useState('');
   const [editDeseng, setEditdeseng] = useState('');
+  const [editlearnMethod, setEditlearnmethod] = useState('')
+  const [editevalMethod, setEditevalmethod] = useState('')
 
   const [opencoModal, setopencoModal] = useState(false);
   const [opencointModal, setopencointModal] = useState(false);
@@ -115,6 +119,14 @@ function Coapp() {
     setcoDeseng(event.target.value);
   }
 
+  function handleLearnmethod(event) {
+    setcolearnMethod(event.target.value)
+  }
+
+  function handleEvalmethod(event) {
+    setcoevalMethod(event.target.value)
+  }
+
   function handleEditcoNumber(event) {
     setEditconum(event.target.value);
   }
@@ -127,6 +139,14 @@ function Coapp() {
     setEditdeseng(event.target.value);
   }
 
+  function handleEditlearnmethod(event) {
+    setEditlearnmethod(event.target.value)
+  }
+
+  function handleEditevalmethod(event) {
+    setEditevalmethod(event.target.value)
+  }
+
   async function submitNumberco(event) {
     event.preventDefault();
     if (coNumber !== '' && coDesthai !== '' && coDeseng !== '') {
@@ -135,6 +155,8 @@ function Coapp() {
         course_id: currentCourse,
         des_thai: coDesthai,
         des_eng: coDeseng,
+        learning_method: colearnMethod,
+        eval_method: coevalMethod
       };
 
       const { data, error } = await supabase.from('co').insert([dataRow]);
@@ -144,6 +166,8 @@ function Coapp() {
       setcourseId('');
       setcoDesthai('');
       setcoDeseng('');
+      setcolearnMethod('')
+      setcoevalMethod('')
 
       loadData();
     }
@@ -164,6 +188,8 @@ function Coapp() {
     setEditconum(coData.co);
     setEditdesthai(coData.des_thai);
     setEditdeseng(coData.des_eng);
+    setEditlearnmethod(coData.learning_method)
+    setEditevalmethod(coData.eval_method)
   }
 
   async function summitEditnumber() {
@@ -174,6 +200,8 @@ function Coapp() {
         co: editcoNumber,
         des_thai: editDesthai,
         des_eng: editDeseng,
+        learning_method: editlearnMethod,
+        eval_method: editevalMethod
       })
       .eq('id', editIdco);
 
@@ -219,6 +247,7 @@ function Coapp() {
             onChange={(e) => setCurrentCourse(e.target.value)}
             style={{ marginBottom: '1rem' }}
           >
+            <option disable select value=""> </option>
             {courseDetails.map((el) => (
               <option value={el.course_id}>{el.course_id}</option>
             ))}
@@ -239,10 +268,14 @@ function Coapp() {
               coNumber={coNumber}
               coDesthai={coDesthai}
               coDeseng={coDeseng}
+              colearnMethod={colearnMethod}
+              coevalMethod={coevalMethod}
               handlecourseId={handlecourseId}
               handlecoNumber={handlecoNumber}
               handleDesthai={handleDesthai}
               handleDeseng={handleDeseng}
+              handleLearnmethod={handleLearnmethod}
+              handleEvalmethod={handleEvalmethod}
               submitNumberco={submitNumberco}
             />
           )}
@@ -258,6 +291,8 @@ function Coapp() {
                     <th>CO Number</th>
                     <th>CO Description Thai</th>
                     <th>CO Description English</th>
+                    <th>CO Learning Method</th>
+                    <th>CO Evaluation Method</th>
                     <th>Edit/Remove</th>
                   </tr>
                 </thead>
@@ -271,9 +306,13 @@ function Coapp() {
                           editcoNumber={editcoNumber}
                           editDesthai={editDesthai}
                           editDeseng={editDeseng}
+                          editlearnMethod={editlearnMethod}
+                          editevalMethod={editevalMethod}
                           handleEditcoNumber={handleEditcoNumber}
                           handleeditDesthai={handleeditDesthai}
                           handleeditDeseng={handleeditDeseng}
+                          handleEditlearnmethod={handleEditlearnmethod}
+                          handleEditevalmethod={handleEditevalmethod}
                           summitEditnumber={summitEditnumber}
                         />
                       ) : (
@@ -282,6 +321,8 @@ function Coapp() {
                           <td>{coMapping.co}</td>
                           <td>{coMapping.des_thai}</td>
                           <td>{coMapping.des_eng}</td>
+                          <td>{coMapping.learning_method}</td>
+                          <td>{coMapping.eval_method}</td>
                           <td>
                             <button
                               type='button'
