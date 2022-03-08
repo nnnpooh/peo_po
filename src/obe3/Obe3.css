@@ -1,39 +1,33 @@
-.obe3{
+.obe3 {
   margin: 0;
   padding: 0;
   background-color: white;
-  font: 12pt "Tahoma";
+  font: 12pt 'Tahoma';
 }
 
-.obe3 .title{
-
-  
+.obe3 .title {
   text-align: center;
-  margin-top: 0px
-  
+  margin-top: 0px;
 }
 
-.obe3 .obe3body{
+.obe3 .obe3body {
   margin: 0;
   padding: 0;
   background-color: rgb(207, 200, 200);
-  font: 12pt "Tahoma";
+  font: 12pt 'Tahoma';
 }
 
-
-.obe3 .select{
+.obe3 .select {
   text-align: center;
-  margin-top: 0px
+  margin-top: 0px;
 }
-
-
 
 .obe3 .obe3body .page {
   width: 21cm;
   min-height: 29.7cm;
   padding: 2cm;
   margin: 1cm auto;
-  border: 1px #D3D3D3 solid;
+  border: 1px #d3d3d3 solid;
   border-radius: 5px;
   background: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -43,19 +37,18 @@
   padding: 1cm;
   border: 5px white;
   height: 256mm;
-
 }
 
 .obe3 .obe3body .subpage .title1 {
   text-align: center;
   margin-top: 0px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .obe3 .obe3body .subpage .title2 {
   text-align: center;
   margin-top: 0px;
-  font-size: 14px
+  font-size: 14px;
 }
 
 .obe3 .obe3body .subpage .body {
@@ -63,23 +56,32 @@
   margin-top: -20px;
   font-size: 13px;
   line-height: 30px;
-
 }
 
 .obe3 .obe3body .subpage .body .table {
   border-spacing: 0;
-  border: 0.5px solid black
-
+  border: 0.5px solid black;
 }
 
 .obe3 th {
   border-spacing: 0;
-  border: 0.5px solid black
-
+  border: 0.5px solid black;
 }
-
 
 @page {
   size: A4;
   margin: 0;
+}
+
+table.obe3 {
+  width: 100%;
+}
+
+table.obe3,
+th.obe3,
+td.obe3 {
+  font: 9pt 'Tahoma';
+  border: 1px solid;
+  border-collapse: collapse;
+  border-color: black;
 }
